@@ -8,7 +8,7 @@ public class stockSpam {
         spam[0] = 1;  // first ele val 
         s.push(0); 
 
-        for(int i = 1; i< stock.length; i++){
+        for (int i = 1; i < stock.length; i++){
             int currPrice = stock[i];
             while(!s.isEmpty() && currPrice > stock[s.peek()]){  // 70 > 60
                 s.pop();

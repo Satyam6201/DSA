@@ -6,10 +6,10 @@ public class Basic_QS {
 
     public static void PrintDec(int n){
         if(n == 1){
-            System.out.print(n);
+            System.out.print(n + " ");
             return;
         }
-        System.out.print(n);
+        System.out.print(n + " ");
         PrintDec(n-1);
     }
 
@@ -132,8 +132,8 @@ public class Basic_QS {
         // int n = 10;
         // PrintDec(n);
 
-        // int n = 10;
-        // PrintInc(n);
+        int n = 10;
+        PrintInc(n);
 
         // int n = 5;
         // System.out.println(Factorial(n));
@@ -155,9 +155,9 @@ public class Basic_QS {
         // int key = 5;
         // System.out.println(LastOcc(arr, key, 0));
 
-        int x = 5;
-        int n = 3;
-        System.out.println(Power(x, n));
+        // int x = 5;
+        // int n = 3;
+        // System.out.println(Power(x, n));
 
         // int x = 5;
         // int n = 3;

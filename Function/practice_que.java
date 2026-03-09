@@ -90,8 +90,8 @@ public static void primeRange(int n ){
     // Scanner sc = new Scanner(System.in);
     //     int a = sc.nextInt();
     //     int b = sc.nextInt();
-    // float binomial = binomial(a, b);
-    // System.out.println(binomial);
+    float binomial = binomial(5, 6);
+    System.out.println(binomial);
 
 
     //method overloading;
@@ -106,7 +106,7 @@ public static void primeRange(int n ){
 
     // check prime range :-
     
-    primeRange(150);
+    // primeRange(150);
         
     }
 }

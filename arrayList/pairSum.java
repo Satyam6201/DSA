@@ -7,20 +7,20 @@ public class pairSum {
     // Brute Force Approach:-
 
 
-    // public static boolean PairSum(ArrayList <Integer> pair, int target){
-    //     for(int i = 0; i< pair.size(); i++){
-    //         for(int j = i+1; j< pair.size(); j++){
-    //             if(pair.get(i) + pair.get(j) == target){
-    //                 return true;
-    //             }
-    //         }
-    //     }
-    //     return false;
-    // }
+    public static boolean PairSum(ArrayList <Integer> pair, int target){
+        for(int i = 0; i< pair.size(); i++){
+            for(int j = i+1; j< pair.size(); j++){
+                if(pair.get(i) + pair.get(j) == target){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     // Two Pointer Approach:-
 
-    public static boolean PairSum(ArrayList <Integer> pair, int target){
+    public static boolean PairSum1 (ArrayList <Integer> pair, int target){
         int lp = 0;
         int rp = pair.size() - 1;
         while (lp < rp) {
@@ -111,7 +111,7 @@ public class pairSum {
         pair.add(5);
         pair.add(6);
         int target = 11;
-        // System.out.println(PairSum(pair, target));  //5 + 6
+        System.out.println(PairSum(pair, target));  //5 + 6
         // System.out.println("Multiple Function = " + PairMul(pair, 18)); // 3 * 6 = 18
 
         ArrayList<Integer> pair2 = new ArrayList<>();
@@ -122,6 +122,6 @@ public class pairSum {
         pair2.add(9);
         pair2.add(10);
 
-        System.out.println(PairSum2(pair2, 16)); // 6+10
+        // System.out.println(PairSum2(pair2, 16)); // 6+10
     }
 }

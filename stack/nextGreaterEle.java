@@ -14,7 +14,7 @@ public class nextGreaterEle {
                 s.pop();
             }
             // step 2 :- 
-            if(s.isEmpty()){
+            if(s.isEmpty()) {
                 nextGreaterEle[i] = -1;
             }
             else{

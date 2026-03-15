@@ -8,24 +8,26 @@ public class nextGreaterEle {
         Stack <Integer> s = new Stack<>();
         int nextGreaterEle [] = new int[arr.length];
 
-        for(int i = arr.length-1; i >= 0; i--){
+        for (int i = arr.length-1; i >= 0; i--) {
             // Step 1:-
             while (!s.isEmpty() && arr[s.peek()] <= arr[i]) {  
                 s.pop();
             }
             // step 2 :- 
-            if(s.isEmpty()) {
+            if (s.isEmpty()) {
                 nextGreaterEle[i] = -1;
             }
-            else{
+            else {
                 nextGreaterEle[i] = arr[s.peek()];
             }
             // step 3 :- 
             s.push(i);
         }
-        for(int i = 0; i< nextGreaterEle.length; i++){
+
+        for (int i = 0; i < nextGreaterEle.length; i++) {
             System.out.print(nextGreaterEle[i] + " ");
         }
+
         System.out.println();
 
 

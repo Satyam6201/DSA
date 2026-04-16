@@ -67,7 +67,5 @@ public class ArrayImple {
             System.out.println(q.peek()); //1, 2, 3, 4, 5
             q.remove();
         }
-
-        
     }
 }

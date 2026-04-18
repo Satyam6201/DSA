@@ -20,9 +20,11 @@ public class buildTree {
         static int index = -1;
         public static Node BuilNode(int nodes[]){
             index++;
-            if(nodes[index] == -1){
+
+            if (nodes[index] == -1) {
                 return null;
             }
+
             Node newNode = new Node(nodes[index]);
             newNode.left = BuilNode(nodes);
             newNode.right = BuilNode(nodes);
@@ -33,10 +35,11 @@ public class buildTree {
         // PreOrder:-
 
         public static void preorder(Node root){
-            if(root == null){
+            if (root == null) {
                 // System.out.print(-1+ " "); //1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1 
                 return;
             }
+
             System.out.print(root.data + " ");
             preorder(root.left);
             preorder(root.right);
@@ -45,9 +48,10 @@ public class buildTree {
         // InOrder:-
 
         public static void inorder(Node root){
-            if(root == null){
+            if (root == null) {
                 return;
             }
+
             inorder(root.left);
             System.out.print(root.data + " ");
             inorder(root.right);
@@ -56,9 +60,10 @@ public class buildTree {
         // PostOrder:-
 
         public static void postorder(Node root){
-            if(root ==  null){
+            if (root ==  null) {
                 return;
             }
+
             postorder(root.left);
             postorder(root.right);
             System.out.print(root.data + " ");
@@ -67,7 +72,7 @@ public class buildTree {
         // LevelOrder:-
 
         public static void levelOrder(Node root){
-            if(root == null){
+            if (root == null) {
                 return;
             }
 
@@ -77,21 +82,23 @@ public class buildTree {
 
             while (!q.isEmpty()) {
                 Node currNode = q.remove();
-                if(currNode == null){
+                if (currNode == null) {
                     System.out.println();
-                    if(q.isEmpty()) {
+
+                    if (q.isEmpty()) {
                         break;
                     }
-                    else{
+                    else {
                         q.add(null);
                     }
                 }
-                else{
+                else {
                    System.out.print(currNode.data+ " ");
-                   if(currNode.left != null) {
+
+                   if (currNode.left != null) {
                     q.add(currNode.left);
                    }
-                   if(currNode.right != null) {
+                   if (currNode.right != null) {
                     q.add(currNode.right);
                    }
                 }
@@ -117,6 +124,6 @@ public class buildTree {
         // 1 
         // 2 3
         // 4 5 6
-        tree.levelOrder(root); 
+        // tree.levelOrder(root); 
     }
 }
